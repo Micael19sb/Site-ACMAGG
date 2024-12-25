@@ -1,0 +1,500 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat-Black", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #7f7f7f;
+  }
+
+  header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 80 24px 24px;
+  }
+  header img {
+    width: 200px;
+    height: auto;
+    margin-top: auto;
+  }
+
+  header a {
+    color: #1B418C;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+  }
+
+  #inicio {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 80px 80px 128px 80px; /* Aumentei o padding superior para 80px */
+    position: relative;
+    margin-bottom: 100px; /* Espaço entre as seções */
+}
+
+  #inicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Opcional: para cantos arredondados */
+  }
+ 
+  .carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; /* Para 2 imagens, ajustar conforme o número */
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  button.prev,
+  button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  button.prev:hover,
+  button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  #inicio div {
+    max-width: 600px; /* Limita a largura do texto */
+  }
+  
+  #inicio h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #1B418C; /* Cor ajustável */
+  }
+  
+  #inicio .paragrafo {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2b2b2b; /* Cor ajustável */
+  }
+  
+
+  h1,
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+.paragrafo {
+    line-height: 150%;
+    margin-bottom: 32px;
+  }
+  
+.absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+  }
+  
+
+  #quem-somos {
+    display: flex; /* Coloca o texto e a imagem lado a lado */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaço uniforme entre os itens */
+    gap: 40px; /* Espaçamento horizontal entre o texto e a imagem */
+    padding: 20px;
+    margin-top: 50px; /* Espaço superior entre as seções */
+}
+
+#quem-somos .texto {
+    flex: 1; /* Define que o texto ocupa metade do espaço disponível */
+    text-align: center; /* Centraliza horizontalmente o texto */
+}
+
+#quem-somos .texto h2 {
+    margin-bottom: 10px; /* Reduz espaço abaixo do título */
+    font-size: 2rem; /* Ajusta o tamanho do título */
+    margin-top: -20px; /* Eleva o título */
+    color: #1B418C;
+}
+
+#quem-somos .texto .paragrafo {
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte do texto */
+    line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
+    color: #2b2b2b; /* Ajusta a cor para coincidir com "Quem somos" */
+    text-align: left;
+    margin-left: 100px;
+}
+
+#quem-somos .imagem {
+    flex: 1; /* Define que a imagem ocupa metade do espaço disponível */
+    display: flex; /* Centraliza a imagem no container */
+    justify-content: center; /* Centraliza horizontalmente a imagem */
+    align-items: center; /* Centraliza verticalmente a imagem */
+}
+
+#quem-somos .imagem img {
+    max-width: 80%; /* Garante que a imagem não ultrapasse 80% da largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 4px transparent; /* Borda ao redor da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra à imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+/* Novo estilo para "Nossa história" */
+#nossa-historia {
+    padding: 40px; /* Maior espaçamento dentro da seção */
+    margin-top: 60px; /* Espaço entre as seções */
+    margin-bottom: 60px; /* Espaço abaixo da seção */
+}
+
+
+#nossa-historia .texto h2 {
+    text-align: center; 
+    color: #1B418C;
+    font-size: 2rem;
+    margin-bottom: 40px; /* Aumentei o espaçamento abaixo do título */
+}
+
+#nossa-historia .texto .paragrafo {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2b2b2b;
+    margin-left: 20px;
+    margin-bottom: 40px; /* Aumentei o espaçamento entre os parágrafos */
+}
+
+
+footer {
+    background-color: #ffffff; /* Fundo branco */
+    color: #1B418C; /* Cor principal do texto */
+    padding: 20px 40px; /* Espaçamento interno */
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço entre os itens */
+    gap: 20px; /* Espaço entre as colunas */
+    border-top: 4px solid #1B418C; /* Linha decorativa no topo do footer */
+}
+
+footer div {
+    flex: 1; /* Divide o espaço igualmente entre as colunas */
+}
+
+footer img {
+    max-width: 50%; /* Imagem ajustável ao tamanho do container */
+    height: auto; /* Mantém proporção da imagem */
+    margin-bottom: 16px; /* Espaço abaixo da imagem */
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+    box-shadow: 0 4px 8px rgb(255, 255, 255); /* Sombra para a imagem */
+}
+
+footer .titulo {
+    font-size: 1.5rem; /* Tamanho do texto do título */
+    color: #1B418C; /* Cor principal do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+footer nav a {
+    display: block; /* Cada link ocupa uma linha */
+    color: #1B418C; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado */
+    margin-bottom: 10px; /* Espaço entre os links */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+footer nav a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    color: #1B418C; /* Cor ao passar o mouse */
+}
+
+footer p {
+    font-size: 1rem; /* Tamanho da fonte dos parágrafos */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+    
+}
+
+footer a {
+    color: #1B418C; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+footer a:hover {
+    color: #1B418C; /* Cor ao passar o mouse */
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    margin-left: 20px;
+}
+
+footer Contato p {
+    margin-left: auto;
+}
+
+footer .contato {
+    color: #1B418C; /* Cor para os textos WhatsApp e Email */
+    font-weight: bold; /* Opcional: destaque no texto */
+    margin-bottom: 10px; /* Espaço adicional, se necessário */
+}
+.map-frame {
+    width: 150px;
+    height: 250px;
+    margin-block-end: auto;
+}
+
+.titulos {
+  position: relative;
+}
+
+section h2 {
+  text-align: center;
+  color: #1B418C;
+}
+
+
+.titulos h3 {
+  border: 2px solid #7f7f7f;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 24px;
+  color: #2b2b2b;
+  margin-bottom: 30px;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.titulos img {
+position:absolute;
+  top: 32px;
+  right: 24px;
+  width: 2%;
+  align-items: flex-start;
+}
+
+
+.titulos.ativa .h3 {
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+}
+
+.menu-toggle {
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #1B418C;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 1%;
+  margin-top: -2%;
+}
+
+.side-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.menu-content {
+  padding: 20px;
+}
+
+.menu-logo {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 80%;
+}
+
+.search-bar {
+  width: calc(100% - 40px);
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #2b2b2b;
+}
+
+.search-btn {
+  background: #1B418C;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menu-items {
+  list-style: none; /* Remove os pontos */
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Alinha os itens à esquerda */
+}
+
+.menu-items li {
+  margin: 10px 0;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  display: block;
+  padding: 5px 0; /* Adiciona espaçamento entre os itens */
+}
+
+.menu-items li a:hover {
+  color: #1B418C;
+}
+
+.menu-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-box {
+  background-color: #f4f4f4; /* Cor de fundo da caixinha */
+  border: 1px solid #ccc; /* Borda da caixinha */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Espaçamento interno */
+  margin: 10px auto; /* Espaçamento entre as caixinhas */
+  width: 80%; /* Largura das caixinhas */
+  text-align: center; /* Centraliza o texto dentro da caixinha */
+}
+
+.footer-box a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #1B418C; /* Cor do texto */
+  font-weight: bold; /* Negrito no texto */
+}
+
+.footer-box a:hover {
+  color: #000; /* Cor ao passar o mouse */
+}
+
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-box {
+  background-color: #f4f4f4; /* Cor de fundo */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Espaçamento interno */
+  margin: 10px auto; /* Espaçamento entre os elementos */
+  width: 80%; /* Largura da caixinha */
+  text-align: center; /* Centraliza o texto */
+}
+
+.social-box a {
+  text-decoration: none;
+  color: #1B418C;
+  font-weight: bold;
+}
+
+.social-box a:hover {
+  color: #000;
+}
+
+.close-bnt {
+  background-color: transparent; /* Fundo transparente */
+  border: 1px transparent; /* Borda visível */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 5px 10px; /* Espaçamento interno */
+  color: #1B418C; /* Cor do texto */
+  font-size: 18px; /* Tamanho do texto */
+  font-weight: bold; /* Negrito no texto */
+  position: absolute; /* Para posicionar o botão no topo */
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  cursor: pointer; /* Cursor de clique */
+}
+
+.close-bnt:hover {
+  color: #000; /* Cor do texto ao passar o mouse */
+  border-color: #1B418C; /* Cor da borda ao passar o mouse */
+}
+
+/* Estilo para o popup */
+.popup-overlay {
+  display: none; /* Começa oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteúdo do popup */
+.popup-content {
+  position: relative;
+  width: 80%; /* Largura do popup */
+  height: 80%; /* Altura do popup */
+  background-color: #fff; /* Fundo branco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Botão de fechar */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.popup-close:hover {
+  color: #1b418c; /* Cor ao passar o mouse */
+}
+
+/* Estilo do iframe para exibir o PDF */
+.popup-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
